@@ -62,9 +62,10 @@ li {
 }
 
 img {
-    max-width: 600px;
-    width: 100%;
-    height: auto;
+    max-width: 400px !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     margin: 20px 0;
