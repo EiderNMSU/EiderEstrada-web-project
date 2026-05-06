@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eider Estrada - Project 4</title>
-    <link rel="stylesheet" href="../../../css/styles.css">
+    <style>
+        /* CSS MOVED HERE TO ENSURE IT LOADS */
+        body { background-color: #f0f4f8; font-family: 'Segoe UI', Arial, sans-serif; color: #333; line-height: 1.6; margin: 0; padding: 40px; }
+        h1 { color: #004085; font-size: 2.8rem; border-bottom: 3px solid #004085; }
+        nav { display: flex; gap: 25px; background-color: #343a40; padding: 15px; border-radius: 5px; margin-bottom: 40px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        img { max-width: 400px; width: 100%; height: auto; border-radius: 8px; margin: 20px 0; }
+        #interactive-area { background: white; padding: 25px; border-radius: 10px; border-left: 5px solid #004085; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        button { padding: 10px 20px; background-color: #004085; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        @media (max-width: 768px) { body { padding: 20px; } nav { flex-direction: column; } }
+    </style>
 </head>
 <body>
-
     <nav>
         <a href="../../../index.html">Home</a> | 
         <a href="project4.html">Project 4</a>
@@ -20,32 +29,35 @@
 
     <main>
         <section>
-            <p>Developing a robust network environment requires a deep understanding of both physical hardware and logical configurations.</p>
-            
+            <p>Developing a robust network environment requires a deep understanding of hardware. This project demonstrates HTML, CSS, and JS integration.</p>
             <h3>Essential Hardware Components</h3>
             <ul>
-                <li>Rack-mounted Servers (1U, 2U, 4U configurations)</li>
-                <li>High-speed Network Switches and Routers</li>
-                <li>Uninterruptible Power Supplies (UPS)</li>
-                <li>Advanced Cooling Systems</li>
+                <li>Rack-mounted Servers</li>
+                <li>Network Switches</li>
+                <li>UPS & Cooling Systems</li>
             </ul>
-
-            <img src="../../../images/server-hardware.jpg" alt="A professional server rack" style="max-width: 400px; height: auto;">
-            
-            <p>To learn more, visit <a href="https://www.cisco.com" target="_blank">Cisco</a>.</p>
+            <img src="../../images/server-hardware.jpg" alt="Server rack">
         </section>
 
         <section id="interactive-area">
             <h2>User Interaction</h2>
             <form id="userForm">
                 <label for="nameInput">Full Name:</label>
-                <input type="text" id="nameInput" placeholder="Enter your name" required>
-                <button type="submit" id="submitBtn">Greet Me!</button>
+                <input type="text" id="nameInput" required>
+                <button type="submit">Greet Me!</button>
             </form>
-            <div id="greetingDisplay"></div>
+            <div id="greetingDisplay" style="margin-top: 15px; font-weight: bold; color: darkblue;"></div>
         </section>
     </main>
 
-    <script src="../../../script.js"></script>
+    <script>
+        /* JAVASCRIPT MOVED HERE TO ENSURE IT RUNS */
+        document.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('nameInput').value;
+            const display = document.getElementById('greetingDisplay');
+            display.innerHTML = "<h3>Hello, " + name + "!</h3><p>Welcome to my Project 4 interactive page.</p>";
+        });
+    </script>
 </body>
 </html>
