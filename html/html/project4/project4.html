@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eider Estrada - Project 4: Interactive Webpage</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html">Home</a> | 
+        <a href="project4.html">Project 4</a>
+    </nav>
+
+    <header>
+        <h1>Enterprise Server Infrastructure</h1>
+        <h2>Modern Hardware & Data Management</h2>
+    </header>
+
+    <main>
+        <section>
+            <p>Developing a robust network environment requires a deep understanding of both physical hardware and logical configurations. This project demonstrates the integration of HTML structure, CSS styling, and JavaScript interactivity.</p>
+            
+            <h3>Essential Hardware Components</h3>
+            <ul>
+                <li>Rack-mounted Servers (1U, 2U, 4U configurations)</li>
+                <li>High-speed Network Switches and Routers</li>
+                <li>Uninterruptible Power Supplies (UPS)</li>
+                <li>Advanced Cooling Systems</li>
+            </ul>
+
+            <img src="../images/server-hardware.jpg" alt="A professional server rack with blue lighting indicators">
+            
+            <p>To learn more about modern networking standards, visit the <a href="https://www.cisco.com" target="_blank">Cisco Resource Center</a>.</p>
+        </section>
+
+        <section id="interactive-area">
+            <h2>User Interaction</h2>
+            <p>Use the form below to test the JavaScript event listener functionality.</p>
+            
+            <form id="userForm">
+                <label for="nameInput">Full Name:</label>
+                <input type="text" id="nameInput" placeholder="Enter your name" required>
+                <button type="submit" id="submitBtn">Greet Me!</button>
+            </form>
+            
+            <div id="greetingDisplay"></div>
+        </section>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+</html>
