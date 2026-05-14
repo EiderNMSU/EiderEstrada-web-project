@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTech Solutions | The Final</title>
+    <style>
+        /* Universal Reset */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f1ea;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Nav */
+        .navbar {
+            background-color: #2d5a27;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 5%;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo-text { font-size: 1.8rem; font-weight: bold; }
+
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li a { color: white; text-decoration: none; padding: 0 20px; font-weight: 500; }
+        .nav-links li a:hover { color: #76a055; }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .hero-content h1 { font-size: 2.5rem; color: #2d5a27; margin-bottom: 10px; }
+
+        .hero-img {
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Product Section & Table */
+        #product-section { padding: 40px 5%; max-width: 1000px; margin: 0 auto; }
+        h2 { text-align: center; color: #2d5a27; margin-bottom: 20px; }
+
+        .controls { text-align: center; margin-bottom: 30px; }
+        
+        button {
+            padding: 12px 25px;
+            margin: 5px;
+            background: #2d5a27;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover { background: #76a055; transform: translateY(-2px); }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        th, td { padding: 18px; border-bottom: 1px solid #eee; text-align: left; }
+        th { background-color: #76a055; color: white; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #2d5a27;
+            color: white;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; gap: 15px; }
+            .hero-content h1 { font-size: 1.8rem; }
+            table { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="../../javascript/javascript/images/logo.jpg" alt="GreenTech Solutions Logo" height="60">
+                <span class="logo-text">GreenTech</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="final.html">The Final</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>GreenTech Solutions</h1>
+                <p>Advancing sustainability through innovative technology.</p>
+            </div>
+            <img src="../../javascript/javascript/images/solar-farm.jpg" alt="Eco-friendly solar farm" class="hero-img">
+        </section>
+
+        <section id="product-section">
+            <h2>Our Eco-Solutions</h2>
+            <div class="controls">
+                <button onclick="filterProducts('all')">Show All</button>
+                <button onclick="filterProducts('Hardware')">Hardware</button>
+                <button onclick="filterProducts('Software')">Software Only</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Environmental Impact</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list">
+                    <tr class="product-row" data-category="Hardware">
+                        <td>Smart Grid Sensor</td>
+                        <td>Hardware</td>
+                        <td>Reduces energy waste by 15%</td>
+                    </tr>
+                    <tr class="product-row" data-category="Software">
+                        <td>EcoTrack Dashboard</td>
+                        <td>Software</td>
+                        <td>Real-time carbon footprint monitoring</td>
+                    </tr>
+                    <tr class="product-row" data-category="Hardware">
+                        <td>Industrial Solar Inverter</td>
+                        <td>Hardware</td>
+                        <td>Optimizes solar energy conversion</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GreenTech Solutions | Built for NMSU ICT 280</p>
+    </footer>
+
+    <script>
+        function filterProducts(category) {
+            const rows = document.querySelectorAll('.product-row');
+            rows.forEach(row => {
+                const productCategory = row.getAttribute('data-category');
+                if (category === 'all' || productCategory === category) {
+                    row.style.display = 'table-row';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

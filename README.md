@@ -1,11 +1,15 @@
-# EiderEstrada-web-project
-## Project 2 - HTML Foundation Page
+# GreenTech Solutions Website
 
-### Theme
-The theme for this project is Nature Photography, focusing on the equipment used and the benefits of the hobby.
+### Project Description
+A fully responsive, accessible website for a sustainability-tech startup. This site showcases eco-friendly products and provides a platform for businesses to engage with green technology.
 
-### What I Learned
-I learned how to use HTML tables not just for data, but also for creating a simple navigation bar. I also practiced using legacy HTML attributes like `bgcolor` and `align` which were common before CSS became the standard.
+### Technologies Used
+* HTML5 (Semantic Structure)
+* CSS3 (Flexbox, Media Queries)
+* JavaScript (Form Validation & Interactivity)
+* WCAG 2.1 Guidelines (Accessibility)
 
-### Challenges
-The biggest challenge was organizing the layout without using CSS. It was difficult to add spacing and margins using only HTML attributes like `cellpadding` and `leftmargin`.
+### Setup Instructions
+1. Clone the repository or download the ZIP file.
+2. Open `index.html` in any modern web browser.
+3. Navigate through the site using the top navigation bar.
